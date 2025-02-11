@@ -1,5 +1,5 @@
 import numpy as np
-from projdir.game_utils import NO_PLAYER, BoardPiece, PlayerAction, SavedState
+from game_utils import NO_PLAYER, BoardPiece, PlayerAction, SavedState
 
 def generate_move_random(
     board: np.ndarray, player: BoardPiece, saved_state: SavedState | None

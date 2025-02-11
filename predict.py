@@ -28,7 +28,7 @@ def preprocess_board(board: np.ndarray) -> np.ndarray:
     return np.stack([board_p1, board_p2, board_empty], axis=0)  # Shape: (3, 6, 7)
 
 
-def load_model(model_path: str = get_relative_path("connect4_model.pth")) -> Connect4Net:
+def load_model(model_path: str = get_relative_path("..","connect4_model.pth")) -> Connect4Net:
     """
     Load a trained Connect4Net model from the specified path.
 
