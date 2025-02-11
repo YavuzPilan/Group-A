@@ -1,6 +1,5 @@
 from enum import Enum
 from typing import Callable, Optional, Any
-import math
 
 import numpy as np
 

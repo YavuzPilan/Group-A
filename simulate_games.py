@@ -7,7 +7,7 @@ import time
 
 from game_utils import (
     initialize_game_state, apply_player_action, check_end_state, GameState,
-    NO_PLAYER, PLAYER1, PLAYER2, valid_moves, pretty_print_board
+    PLAYER1, PLAYER2, valid_moves
 )
 from agents.agent_MCTS.MCTS import generate_move_mcts
 

@@ -113,8 +113,6 @@ def train():
 
         print(f"Epoch {epoch + 1} completed. Avg Train Loss: {avg_epoch_loss:.4f}, Test Loss: {test_loss:.4f}")
 
-
-
         # Save losses to CSV
         with open("Data/loss_log.csv", mode="a", newline="") as file:
             writer = csv.writer(file)

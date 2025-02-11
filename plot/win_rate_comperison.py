@@ -1,18 +1,16 @@
 import threading
 import time
 import csv
-import matplotlib.pyplot as plt
 from typing import Callable
 
-from projdir.agents.agent_MCTS.MCTS import generate_move_mcts
-from projdir.agents.agent_Minimax.Minimax import generate_move_minimax
-from projdir.agents.agent_random.random import generate_move_random
-from projdir.game_utils import PLAYER1, PLAYER2, PLAYER1_PRINT, PLAYER2_PRINT, GameState, MoveStatus, GenMove
-from projdir.game_utils import initialize_game_state, pretty_print_board, apply_player_action, check_end_state, \
+from agents.agent_MCTS.MCTS import generate_move_mcts
+from agents.agent_Minimax.Minimax import generate_move_minimax
+from agents.agent_random.random import generate_move_random
+from game_utils import PLAYER1, PLAYER2, GameState, MoveStatus, GenMove
+from game_utils import initialize_game_state, pretty_print_board, apply_player_action, check_end_state, \
     check_move_status
-from projdir.agents.agent_human_user import user_move
-from projdir.agents.agent_MCTS_with_nn.MCTS_with_nn import generate_move_mcts_with_nn
-from projdir.plot.plots import generate_filename, get_relative_path
+from agents.agent_MCTS_with_nn.MCTS_with_nn import generate_move_mcts_with_nn
+from plot.plots import get_relative_path
 
 
 def human_vs_agent(

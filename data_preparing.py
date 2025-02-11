@@ -4,7 +4,7 @@ import pandas as pd
 import ast
 
 # Define dataset path
-from projdir.plot.plots import get_relative_path
+from plot.plots import get_relative_path
 
 DATASET_PATH = get_relative_path("Data", "dataset.csv")
 

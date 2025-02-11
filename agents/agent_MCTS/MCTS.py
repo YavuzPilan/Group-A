@@ -2,7 +2,7 @@ import copy
 import numpy as np
 import math
 
-from projdir.game_utils import valid_moves, apply_player_action, check_end_state, GameState, PLAYER1, PLAYER2
+from game_utils import valid_moves, apply_player_action, check_end_state, GameState, PLAYER1, PLAYER2
 
 
 class MCTSNode:

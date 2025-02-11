@@ -1,9 +1,8 @@
 import numpy as np
 from game_utils import (
-    BoardPiece, PlayerAction, NO_PLAYER, PLAYER1, PLAYER2, 
-    apply_player_action, check_end_state, GameState
+    NO_PLAYER, PLAYER1, PLAYER2,
 )
-from agents.agent_MCTS.MCTS  import (
+from agents.agent_MCTS.MCTS import (
     get_valid_moves, evaluate_board, evaluate_window, MCTS, generate_move_mcts
 )
 
@@ -43,7 +42,7 @@ def test_mcts():
     board = np.full((6, 7), NO_PLAYER)
     board[0, 3] = PLAYER1  # One piece in the center
     action = MCTS(board, PLAYER2, iterations=10)
-    
+
     assert action in get_valid_moves(board), f"MCTS selected an invalid move: {action}"
 
 
