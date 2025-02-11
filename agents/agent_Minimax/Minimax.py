@@ -3,7 +3,7 @@ import numpy as np
 from game_utils import check_end_state, GameState, NO_PLAYER, PLAYER1, PLAYER2, apply_player_action, BoardPiece, \
     PlayerAction, SavedState
 
-MAX_DEPTH = 1000
+MAX_DEPTH = 1
 SCORE4 = 500
 SCORE3 = 100
 SCORE2 = 10
