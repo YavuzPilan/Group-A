@@ -1,7 +1,7 @@
 import numpy as np
 from typing import Callable, Any
 
-from projdir.game_utils import BoardPiece, PlayerAction, SavedState, MoveStatus, check_move_status
+from game_utils import BoardPiece, PlayerAction, SavedState, MoveStatus, check_move_status
 
 
 def query_user(prompt_function: Callable) -> Any:

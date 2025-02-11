@@ -1,8 +1,7 @@
 import copy
-import numpy as np
 import math
-from projdir.game_utils import valid_moves, apply_player_action, check_end_state, GameState, PLAYER1, PLAYER2
-from projdir.predict import predict_policy_and_value, load_model  # Import neural network functions
+from game_utils import valid_moves, apply_player_action, check_end_state, GameState, PLAYER1, PLAYER2
+from predict import predict_policy_and_value, load_model  # Import neural network functions
 
 
 class MCTSNode_with_nn:

@@ -1,6 +1,6 @@
 import numpy as np
 
-from projdir.game_utils import check_end_state, GameState, NO_PLAYER, PLAYER1, PLAYER2, apply_player_action, BoardPiece, \
+from game_utils import check_end_state, GameState, NO_PLAYER, PLAYER1, PLAYER2, apply_player_action, BoardPiece, \
     PlayerAction, SavedState
 
 MAX_DEPTH = 1000
