@@ -6,7 +6,7 @@ import ast
 # Define dataset path
 from plot.plots import get_relative_path
 
-DATASET_PATH = get_relative_path("Data", "dataset.csv")
+DATASET_PATH = get_relative_path("..", "Data", "dataset.csv")
 
 
 def load_and_prepare_data(skip=1, partition_rate=0.9):

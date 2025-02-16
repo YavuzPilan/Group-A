@@ -135,7 +135,7 @@ def forced_move(board, player):
     return None
 
 
-def generate_move_mcts(board, player, save_state, iterations=1):
+def generate_move_mcts(board, player, save_state, iterations=10):
     """
     Generates a move using the Monte Carlo Tree Search algorithm.
 

@@ -53,7 +53,7 @@ def plot_loss(epochs=None, losses=None, test_loss=None):
 
     if epochs is None or losses is None or test_loss is None:
         # File path (update it with your actual file path)
-        file_path = r"C:\Users\pilan\Desktop\projdir\projdir\Data\loss_log.csv"
+        file_path = get_relative_path("..", "Data", "loss_log.csv")
 
         # Initialize lists
         epochs = []
@@ -88,7 +88,7 @@ def plot_loss(epochs=None, losses=None, test_loss=None):
 # ==================== COMPARISON PLOTS ====================
 
 
-def plot_win_rate_comparison(methods, win_rates):
+def plot_win_rate_comparison(methods=None, win_rates=None):
     """
     Compares win rates against different opponent types.
 
@@ -97,31 +97,33 @@ def plot_win_rate_comparison(methods, win_rates):
         win_rates (list of float): Win rates in percentage.
     """
 
-    if methods is None and win_rates is None:
+    if not methods or not win_rates:
         # File path (update it with your actual file path)
-        file_path = get_relative_path("..", "Data", "loss_log.csv")
+        file_path = get_relative_path("..", "Data", "win_rates.csv")
 
         # Initialize lists
-        methods = []
-        win_rates = []
+        methods, win_rates = [], []
 
         # Read CSV file
         with open(file_path, "r") as file:
             reader = csv.reader(file)
             next(reader)  # Skip the header row
             for row in reader:
-                methods.append(str(row[0]))  # Convert methods to string
-                win_rates.append(float(row[1]))  # Convert win_rates loss to float
+                methods.append(row[0])  # Convert method name to string
+                win_rates.append(float(row[1]))  # Convert win rate to float
 
-    plt.figure()
+    plt.figure(figsize=(8, 6))
     plt.bar(methods, win_rates, color=['blue', 'red', 'green'], alpha=0.7)
+    plt.ylim(0, 100)  # Ensure y-axis is from 0 to 100
     plt.xlabel('Opponent Type')
     plt.ylabel('Win Rate (%)')
     plt.title('Win Rate Comparison (100 Games Each)')
+    plt.xticks(rotation=45)  # Rotate labels if needed
+    plt.grid(axis='y', linestyle='--', alpha=0.7)  # Add horizontal grid lines for readability
     plt.savefig(generate_filename("win_rate_comparison"))
     plt.close()
 
 
 if __name__ == '__main__':
     plot_loss(None, None)
-    # plot_win_rate_comparison(None, None)
+    plot_win_rate_comparison(None, None)

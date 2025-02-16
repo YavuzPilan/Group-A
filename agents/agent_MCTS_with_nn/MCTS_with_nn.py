@@ -103,7 +103,7 @@ def forced_move(board, player):
     return None
 
 
-def generate_move_mcts_with_nn(board, player, save_state, iterations=1):
+def generate_move_mcts_with_nn(board, player, save_state, iterations=500):
     """
     Generates a move using MCTS with neural network guidance.
     """

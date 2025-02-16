@@ -1,4 +1,4 @@
 Method,Win Rate (%)
-Random Bot,0
+Random Bot,100.0
 Minimax,100.0
-MCTS,100.0
+MCTS,50.0
