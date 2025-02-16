@@ -19,6 +19,12 @@ This hybrid method results in a **stronger, faster, and more reliable** Connect 
 
 ---
 
+## Installing dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
 ## How to Play Against the Neural Network
 To challenge the AI, simply **run the main script**:
 ```bash
